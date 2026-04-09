@@ -1,0 +1,15 @@
+bRo in this problem we just have to connect the backend with database using given environment variables 
+
+
+basically environment variable kya hain --> these are used to configure the database connection dynamically in the backend service.
+
+in the compose.yml file 
+
+write enviroments: 
+    DB_HOST: mongodb
+    DB_PORT: 27017
+
+this is the only thing we have to do done 
+
+
+just run `docker-compose up -d --build` 

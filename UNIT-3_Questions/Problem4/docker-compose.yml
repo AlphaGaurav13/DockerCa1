@@ -1,0 +1,21 @@
+version: "3.8"
+
+services:
+  
+  database: 
+    image: mysql:8
+    container_name: secure_db
+    environment:
+      MYSQL_ROOT_PASSWORD_FILE: /run/secrets/db_password
+    secrets:
+      - db_password
+  backend:
+    image: node:18
+    depends_on:
+      - database
+    secrets:
+      - db_password
+
+secrets:
+  db_password:
+    file: ./db_password.txt

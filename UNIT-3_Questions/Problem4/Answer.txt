@@ -1,0 +1,27 @@
+Bro here we just to tight up the security 
+
+
+problems want us to use the secret attribute inside the config file(i.e docker-compose.yml) make sure that password fetch other file which not show to other people
+
+
+for this just add --> 
+
+secrets:
+    db_password:
+        file: ./db_password.txt
+
+
+done bro also inside the database service written inside the config file 
+in environment part 
+
+
+MYSQL_ROOT_PASSWORD_FILE: /run/secrets/db_password  # this say that this is the place where the db_password file will be present inside the running container
+
+
+
+make sure to create the db_password.txt file inside the problem4 folder and write some gibrish password
+
+
+to showcase write this command on cmd in this problem4 folder --> `docker-compose up -d --build`
+
+to show case to sirrr!

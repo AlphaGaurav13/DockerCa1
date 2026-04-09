@@ -1,0 +1,1 @@
+bro in this problem using docker compose we just have deploy two services node and mongo

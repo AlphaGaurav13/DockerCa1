@@ -1,0 +1,18 @@
+version: "3.8"
+
+services: 
+  database: 
+    image: mysql:8
+    container_name: db_container
+    environment: 
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: appdb
+    ports:
+      - "3306:3306"
+  backend:
+    image: node:18
+    container_name: backend_container
+    depends_on:      #this is the main line this only thing we have to add
+      - database
+    ports: 
+      - "5000:5000" 

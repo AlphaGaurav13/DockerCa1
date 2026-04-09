@@ -1,0 +1,12 @@
+Bro in this problem we just have to make sure that the database run first then backend so that it should not crash due to unavailbilty of the database
+
+
+
+for this we have to do write one line the docker-compose.yml depends_on attribute in the backend services
+depends_on: 
+    - database
+
+
+then just done this problem is done here 
+
+to show it sir just run the docker-compose up -d --build and if it is running then done!

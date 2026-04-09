@@ -1,0 +1,21 @@
+Bro this question was just want us to convert a monolithic application (running on a single server) into a microservices architecture using Docker Compose.
+
+In a monolithic setup, all components (frontend, backend, database) run together, making it difficult to scale and manage.
+To solve this, we split the application into separate services.
+
+for this we have just create docker-compose.yml file and define all the severice step by step
+
+1) for frontend we are using neginx image to showcase the service 
+2) for backend we just creating small express server in explicitly creating a backend folder
+3) for data we are using sql13 or 22 i guess
+
+after creating all these thing and writtent the yml file 
+
+we have to open the cmd and has to go to the problem1 folder and write these steps to show case this problem sollution
+
+1) docker-compose up -d --build # this command is used to run or manage the multiple containers here up is telling create this services                          in a container and also start it -d means run in a  detached mode means terminal to block naa kar ki bus ye                                service hi chalegi stop karo then go for other services to run so basically telling to run in background
+                                  and --build ka mtlb hain agar koi image jo mention kar rhe vo outdated hain toh rebuild kardo auto.
+
+
+
+3) docker ps  # to show the running three different containers.

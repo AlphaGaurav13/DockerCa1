@@ -1,0 +1,31 @@
+version: "3.8"
+services:
+  frontend:
+    image: nginx:latest
+    container_name: ecommerce_frontend
+    ports: 
+      - "3000.80"
+    depends_on:
+      - backend
+  backend:
+    image: node:18
+    container_name: ecommerce_backend
+    working_dir: /app
+    volumes:
+      - ./backend:/app
+    command: npm start
+    ports: 
+     - "5000:5000"
+    enviroment:
+      - DB_HOST=database
+      - DB_USER=root
+      - DB_PASSWORD=root
+      - DB_NAME=ecommerce
+    depends_on: 
+      - database
+  database:
+    image: mysql:8
+    container_name: ecommerce_db
+    restart: always
+    enviroment: 
+      MYSQ

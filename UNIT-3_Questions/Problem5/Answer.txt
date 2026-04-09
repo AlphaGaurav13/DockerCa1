@@ -1,0 +1,7 @@
+bro in this question we have prebuilt site built using Word press we are just deploying it on multiple contianers for multiple services like mysql
+
+
+new thing we included here in config file was just restart: always # means when ever app crash it restart auto.
+
+
+just run the command `docker-compose up -d --build`

@@ -1,0 +1,15 @@
+bro just build image for ubuntu to use bash
+
+create a txt file
+
+build image using config file 
+
+install volume 
+
+docker volume create appdata
+
+
+run the image in interactive mode and make changes there and delete the container  again open in -it mode you will the changes persist
+
+
+docker run -it --name container1 problem7:/data ubuntu bash

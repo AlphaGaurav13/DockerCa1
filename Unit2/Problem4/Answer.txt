@@ -1,0 +1,3 @@
+build image
+
+run this then docker run -p 9070:3000 -e APP_ENV=production -e DB_URl=mongodb://db:27017 problem4
